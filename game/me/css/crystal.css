@@ -1,0 +1,53 @@
+/* === CRYSTAL WRAPPER === */
+#crystal-wrapper {
+  position: relative;
+  margin: 20px 0;
+  z-index: 2;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* === CRYSTAL ELEMENT === */
+#crystal {
+  font-size: clamp(80px, 12vw, 140px);
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 20px rgba(100, 100, 255, 0.5));
+  transition: transform 0.1s ease;
+}
+
+#crystal.bounce {
+  transform: scale(0.85);
+}
+
+/* === CRYSTAL GLOW === */
+#crystal-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(100, 100, 255, 0.3) 0%, transparent 70%);
+  animation: pulse-glow 2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* === CRYSTAL KEYFRAMES === */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.15);
+  }
+}

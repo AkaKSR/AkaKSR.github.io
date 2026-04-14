@@ -1,0 +1,55 @@
+/* === TABLET & SMALL SCREENS === */
+@media (max-width: 900px) {
+  #main-area {
+    flex-direction: column;
+  }
+
+  #left-panel,
+  #right-panel {
+    width: 100%;
+    min-width: unset;
+    max-height: 30vh;
+    border: none;
+    border-bottom: 1px solid #2a2a5a;
+  }
+
+  #center-panel {
+    width: 100%;
+    min-height: 40vh;
+  }
+
+  #left-panel { order: 2; }
+  #center-panel { order: 1; }
+  #right-panel { order: 3; }
+
+  .panel-scroll {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .facility-card,
+  .upgrade-card {
+    flex: 1 1 200px;
+    min-width: 180px;
+  }
+}
+
+/* === MOBILE === */
+@media (max-width: 600px) {
+  #mana-display {
+    font-size: 22px;
+  }
+
+  #crystal {
+    font-size: 80px;
+  }
+
+  .ach-card {
+    min-width: 130px;
+  }
+
+  .card-title {
+    font-size: 12px;
+  }
+}

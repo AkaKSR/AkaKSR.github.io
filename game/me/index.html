@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mana Empire</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/crystal.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/effects.css">
+<link rel="stylesheet" href="css/achievements.css">
+<link rel="stylesheet" href="css/toast.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<div id="game-container">
+  <div id="main-area">
+
+    <!-- LEFT PANEL: FACILITIES -->
+    <div id="left-panel">
+      <div class="panel-header">
+        <span>🏭 마나 생산 시설</span>
+        <button id="settings-btn" onclick="ManaEmpire.save.resetGame()">⚙️ 기록 초기화</button>
+      </div>
+      <div class="panel-scroll" id="facility-list"></div>
+    </div>
+
+    <!-- CENTER PANEL -->
+    <div id="center-panel">
+      <canvas id="particle-canvas"></canvas>
+      <div id="mana-display">✨ 0 마나</div>
+      <div id="mps-display">초당 마나 생산량: 0.00 ✨/s</div>
+      <div id="click-count-display">총 클릭: 0</div>
+      <div id="crystal-wrapper">
+        <div id="crystal-glow"></div>
+        <div id="crystal">🔮</div>
+      </div>
+      <div id="golden-orb">⭐</div>
+    </div>
+
+    <!-- RIGHT PANEL: UPGRADES -->
+    <div id="right-panel">
+      <div class="panel-header">⬆️ 업그레이드</div>
+      <div class="panel-scroll" id="upgrade-list"></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ACHIEVEMENT TOGGLE & PANEL -->
+<div id="achievement-toggle" onclick="ManaEmpire.achievements.toggle()">🏆 업적</div>
+<div id="achievement-panel">
+  <div id="achievement-grid"></div>
+</div>
+
+<!-- TOAST CONTAINER -->
+<div id="toast-container"></div>
+
+<!-- SAVE INDICATOR -->
+<div id="save-indicator">💾 마나 기록 저장됨</div>
+
+<!-- JS FILES (load order matters) -->
+<script src="js/config.js"></script>
+<script src="js/state.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/save.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/effects.js"></script>
+<script src="js/milestones.js"></script>
+<script src="js/toast.js"></script>
+<script src="js/achievements.js"></script>
+<script src="js/facilities.js"></script>
+<script src="js/upgrades.js"></script>
+<script src="js/crystal.js"></script>
+<script src="js/golden-orb.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/game-loop.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
